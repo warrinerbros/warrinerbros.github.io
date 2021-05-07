@@ -16,6 +16,9 @@
     />
     <!-- MDB -->
     <link rel="stylesheet" href="css/mdb.min.css" />
+
+    <!-- Adobe PDF Previwer-->
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   </head>
   <body class = "d-flex flex-column min-vh-100">
 
@@ -96,9 +99,28 @@
         </p>
         <p> Click 
         <a href="https://www.michigan.gov/sos/0,4670,7-127-1627_60169_60175---,00.html">here</a>
-        to learn more about the State of Michigan's Graduated Driver Licensing</p>
+        to learn more about the State of Michigan's Graduated Driver Licensing.</p>
 
     <!-- Class Information -->
+
+        <!-- Registration Form -->
+        <div class = "row pt-3">
+          <h3>Segment One Registration Form</h3>
+          <div class = "d-flex col-12 justify-content-center"></div>
+
+            <div id="adobe-dc-view" style="height: 360px; width: 500px;"></div>     
+            <script type="text/javascript">
+              document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+                var adobeDCView = new AdobeDC.View({clientId: "c2cfe3c73e99459ba0fd8ca13600ee46", divId: "adobe-dc-view"});
+                adobeDCView.previewFile({
+                  content:{location: {url: "docs/Segment_One_2020-21_Contract_21Aug20.pdf"}},
+                  metaData:{fileName: "Segment_One_2020-21_Contract_21Aug20.pdf"}
+                }, {embedMode: "SIZED_CONTAINER"});
+              });
+            </script>
+
+          </div>
+        </div>
 
         <!-- Course Offerings -->
         <div class = "row pt-3">
