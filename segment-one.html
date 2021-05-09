@@ -20,81 +20,86 @@
     <!-- Adobe PDF Previwer-->
     <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   </head>
-  <body class = "d-flex flex-column min-vh-100">
 
-    <!-- Start your project here-->
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Navbar brand -->
+      <a class="navbar-brand" href="#">
+        <img src = "img/LADS.PNG" height = "40px" width= "30px">
+      </a>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <!-- Container wrapper -->
-      <div class="container-fluid">
-        <!-- Navbar brand -->
-        <a class="navbar-brand" href="#">
-          <img src = "img/LADS.PNG" height = "40px" width= "30px">
-        </a>
-
-        <!-- Toggle button -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-mdb-toggle="collapse"
-          data-mdb-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i class="fas fa-bars"></i>
-        </button>
-
-        <!-- Collapsible wrapper -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- Left links -->
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link"  href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="segment-one.html">Segment One</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="segment-two.html">Segment Two</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="adult-lessons.html">Adult Lessons</a>
-            </li>
-          <!-- Left links -->
-        </div>
-        <!-- Collapsible wrapper -->
-      </div>
-      <!-- Container wrapper -->
-    </nav>
-    <!-- Navbar -->
-
-    <!-- Background image -->
-      <div
-        class="p-3 text-center bg-image"
-        style="
-          background-image: url(img/classroom.jpg);
-          height: 240px;
-        "
+      <!-- Toggle button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
       >
-        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
-          <div class="d-flex justify-content-center align-items-center h-100">
-            <div class="text-white">
-              <h1 class="mb-3">Segment One</h1>
-            </div>
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link"  href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="segment-one.html">Segment One</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="segment-two.html">Segment Two</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="adult-lessons.html">Adult Lessons</a>
+          </li>
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+
+  <!-- Background image -->
+    <div
+      class="p-3 text-center bg-image"
+      style="
+        background-image: url(img/classroom.jpg);
+        height: 240px;
+        margin-top:64px
+      "
+    >
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white">
+            <h1 class="mb-3">Segment One</h1>
           </div>
         </div>
       </div>
-    <!-- Background image -->
+    </div>
+  <!-- Background image -->
+
+  <header>
+
+  </header>
+  <body class = "d-flex flex-column min-vh-100">
+
+    
 
 
     <!-- Class Information -->
-    <div class = "container-fluid h-100 p-5">
-      <h3>Class Information</h3>
+    <div class = "container">
+      <h3 style="margin-top:50px">Class Information</h3>
       <p>Segment One is the class that can be taken when a student reaches 14 years and 8 months of age by/on the first day of class.
         Students will need a copy of their birth certificate, the Segment One registration form completed, and the Segment One contract completed for the first day of class. 
-          Cost $330. Cash and checks accepted.  Checks made out to Lansing Area Driving School.
+          The cost is $330. Cash and checks accepted. Checks can be made out to Lansing Area Driving School.
             Material will be provided to the students.  
       </p>
       <p> Click 
@@ -106,7 +111,8 @@
       <!-- Registration Form -->
       <div class = "row pt-3">
         <h3>Segment One Contract and Registration Form</h3>
-        <div class = "d-flex col-3 pt-3 justify-content-center"></div>
+
+        <div class = "d-flex col pt-3 justify-content-center">
 
             <div id="adobe-dc-view" class = "pt-3" style="height: 600px; width: 900px;"></div>     
             <script type="text/javascript">
@@ -118,7 +124,7 @@
                 }, {embedMode: "SIZED_CONTAINER"});
               });
             </script>
-
+        </div>
         
       </div>
 
