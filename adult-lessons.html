@@ -16,13 +16,17 @@
     />
     <!-- MDB -->
     <link rel="stylesheet" href="css/mdb.min.css" />
+
+    <!-- Adobe PDF Previwer-->
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+
   </head>
   <body>
 
     <!-- Start your project here-->
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
       <!-- Container wrapper -->
       <div class="container-fluid">
         <!-- Navbar brand -->
@@ -67,7 +71,56 @@
     </nav>
     <!-- Navbar -->
 
+    <!-- Background image -->
+    <div
+    class="p-3 text-center bg-image"
+    style="
+      background-image: url(img/mercedes.jpg);
+      height: 240px;
+      margin-top:64px
+    "
+    >
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+          <h1 class="mb-3">Adult Lessons</h1>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- Background image -->
 
+    <!-- Class Information -->
+    <div class = "container">
+      <h3 style="margin-top:50px"> Adult Driving Session Information</h3>
+      <p> To schedule an adult driving session, contact us by calling
+        <a href="tel:+15178941059">(517)-894-1059</a> or emailing
+        <a href="mailto:keith.warriner@lansingcatholic.org">keith.warriner@lansingcatholic.org</a>.
+      </p>
+
+      <p>
+        Once you have scheduled an lesson with us, print out and fill out the
+        <a href="docs/Adult_Student_Contract_19_Jul_2020.pdf" target="_blank" rel="noopener noreferrer">Adult Student Contract</a>.
+        Please bring it to the first lesson.
+      </p>
+
+      <div class = "row">
+        <div class = "d-flex col justify-content-center mb-5">
+          <div id="adobe-dc-view" class = "pt-3" style="height: 600px; width: 900px;"></div>     
+          <script type="text/javascript">
+            document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+              var adobeDCView = new AdobeDC.View({clientId: "c2cfe3c73e99459ba0fd8ca13600ee46", divId: "adobe-dc-view"});
+              adobeDCView.previewFile({
+                content:{location: {url: "docs/Segment_One_2020-21_Contract_21Aug20.pdf"}},
+                metaData:{fileName: "Segment_One_2020-21_Contract_21Aug20.pdf"}
+              }, {embedMode: "SIZED_CONTAINER"});
+            });
+          </script>
+        </div>
+      </div>
+    </div>
+
+    </body>
     <!-- Footer -->
     <footer class="text-center text-light bg-dark mt-auto">
       <!-- Grid container -->
